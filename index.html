@@ -1,0 +1,73 @@
+align-items: flex-end;
+  z-index: 15;
+  pointer-events: none;
+}
+.ctrl-group {
+  display: flex;
+  gap: 10px;
+  pointer-events: auto;
+}
+.ctrl-btn {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.ctrl-btn span {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+}
+.ctrl-btn.pressed {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0.94);
+}
+.ctrl-gas {
+  height: 82px;
+  background: rgba(46, 204, 113, 0.25);
+  border-color: rgba(46, 204, 113, 0.6);
+}
+.ctrl-brake {
+  height: 64px;
+  background: rgba(231, 76, 60, 0.25);
+  border-color: rgba(231, 76, 60, 0.6);
+}
+<canvas id="gameCanvas"></canvas>
+<div class="stats-bar">
+  <div class="stat-pill">
+    <span>МОНЕТЫ</span>
+    <strong id="menuCoins" style="color:#ffd43b;">0 🪙</strong>
+  </div>
+  <div class="stat-pill">
+    <span>РЕКОРД</span>
+    <strong id="menuRecord" style="color:#69db7c;">0 м</strong>
+  </div>
+</div>
+
+<button class="btn btn-play" id="startBtn">Играть</button>
+<button class="btn btn-garage" id="openGarageBtn">Гараж и машины</button>
+<button class="btn btn-support" id="supportBtn">Поддержать создателя / Предложить идеи</button>
+<div class="stats-bar">
+  <div class="stat-pill">
+    <span>ПРОЕХАЛ</span>
+    <strong id="overDist">0 м</strong>
+  </div>
+  <div class="stat-pill">
+    <span>ЗАРАБОТАЛ</span>
+    <strong id="overEarned" style="color:#ffd43b;">+0 🪙</strong>
+  </div>
+</div>
+
+<button class="btn btn-play" id="restartBtn">Ехать снова</button>
+<button class="btn btn-garage" id="overGarageBtn">Гараж и машины</button>
+<button class="btn btn-support" id="overMenuBtn">В главное меню</button>
